@@ -26,7 +26,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  TextStyle style = TextStyle(fontFamily: 'happy', fontSize: 20.0);
+  TextStyle style = TextStyle(fontFamily: 'happy', fontSize: 30.0);
   Color gradientStart = Colors.blueGrey[50];
   Color gradientEnd = Colors.blueGrey[100];
   final myPassWord = TextEditingController();
@@ -38,19 +38,22 @@ class _MyHomePageState extends State<MyHomePage> {
       obscureText: false,
       controller: myEmail,
       style: style,
+      keyboardType: TextInputType.emailAddress,
+      textAlign: TextAlign.center,
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(125.0, 15.0, 20.0, 15.0),
           hintText: "Email",
+          prefixIcon: Icon(Icons.account_box),
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
     final passwordField = TextField(
       obscureText: true,
       controller: myPassWord,
-      style: style,
+      textAlign: TextAlign.center,
+      //style: style,
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(110.0, 15.0, 20.0, 15.0),
           hintText: "Password",
+          prefixIcon: Icon(Icons.lock),
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -85,8 +88,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 passwordField,
                 SizedBox(height: 20.0),
                 SizedBox(
-                  height: 40.0,
-                  width: 250.0,
+                  height: 60.0,
+                  width: 325.0,
                   child: FloatingActionButton.extended(
                     label: Text("Login"),
                     icon: Icon(Icons.account_circle),
@@ -98,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) {
                           return AlertDialog(
                             title: Text("Informations"),
-                            content: Text("Email: " + emailField.controller.text + '\n' + "Password:" + passwordField.controller.text),
+                            content: Text("Email: " + emailField.controller.text + '\n' + "Password: " + passwordField.controller.text),
                           );
                         },
                       );
