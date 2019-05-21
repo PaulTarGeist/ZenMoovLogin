@@ -26,7 +26,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  TextStyle style = TextStyle(fontFamily: 'happy', fontSize: 30.0);
+  TextStyle style = TextStyle(fontFamily: 'happy', fontSize: 20.0);
   Color gradientStart = Colors.blueGrey[50];
   Color gradientEnd = Colors.blueGrey[100];
   final myPassWord = TextEditingController();
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       controller: myEmail,
       style: style,
       keyboardType: TextInputType.emailAddress,
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.left,
       decoration: InputDecoration(
           hintText: "Email",
           prefixIcon: Icon(Icons.account_box),
@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
     final passwordField = TextField(
       obscureText: true,
       controller: myPassWord,
-      textAlign: TextAlign.center,
-      //style: style,
+      textAlign: TextAlign.left,
+      style: style,
       decoration: InputDecoration(
           hintText: "Password",
           prefixIcon: Icon(Icons.lock),
