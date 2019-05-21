@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login UI',
+      title: 'ZenMoov Login UI',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
