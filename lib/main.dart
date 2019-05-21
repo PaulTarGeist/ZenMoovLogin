@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Center(
         child: Container(
           decoration: new BoxDecoration(
